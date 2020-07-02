@@ -13,14 +13,20 @@ This API is a personal project powered by **NodeJS** and **MongoDB** on the back
 It is assumed that you already have NodeJS and npm module set up on your machine. You also need MongoDB to set up the database. It is your preference whether you wush to set it up locally or on Atlas. Please note that you would have to set it up on Atlas for production.
 Please take the following steps to set up the application on your local machine:
 * Create a folder for the application, then use the following commands in your command line
-```git clone https://github.com/sanjivyash/Task-App-Node.git```
-```npm install```
+```
+git clone https://github.com/sanjivyash/Task-App-Node.git
+npm install
+```
 * Now the packages are installed. However you have to configure the environment variables. Create a ```config``` folder in the root directory and create a file ```dev.env``` inside it. Now set up the following variables inside this file:
-```PORT=3000```
-```JWT_SECRET=aiho883uefh849ohfiha```
-```DATABASE_URL=mongodb://127.0.0.1:27017/task-manager```
+```
+PORT=3000
+JWT_SECRET=aiho883uefh849ohfiha
+DATABASE_URL=mongodb://127.0.0.1:27017/task-manager
+```
 * Honestly you can setup any JWT Secret key but keep it complicated to enhance security. The ```DATABASE_URL``` is given for a local ```MongoDB``` setup. For an **Atlas** setup, please use the URL provided there.
 * Now run the following command on your command line
-```npm run dev``` 
+```
+npm run dev
+``` 
 and you should be all set on your local machine. 
 * Just set up Postman or some other request client and check out your application.
