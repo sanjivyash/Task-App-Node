@@ -81,7 +81,7 @@ UserSchema.statics.findByCredentials = async function(username, password) {
 
 // instance methods
 UserSchema.methods.generateAuthToken = async function() {
-	const token = await jwt.sign({ _id: this._id.toString() }, process.env.JWT_SECRET);
+	const token = await jwt.sign({ _id: this._id.toString() }, process.env.JWT_SECRET, { expiresIn: 60 * 60 });
 	this.tokens.push({ token });
 	await this.save();
 	return token;
